@@ -1,0 +1,26 @@
+﻿@model _4.CodeFirstDatabase_Employee_Department_Controller_Edit_Delete.Models.Student
+
+@*  Import   @model _4.CodeFirstDatabase_Employee_Department_Controller_Edit_Delete.Models.Student
+
+    Import   @model Project Name.Models.Class Name
+*@
+
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@*  BeginForm()  means HTML er from er suru ses(start and ends).From na thakle submit button(jekono button) kaj korbe na  *@
+
+@using (Html.BeginForm())
+{
+    <span>Name:</span> @Html.EditorFor(model => model.Name)
+    <br />
+    @* EditorFor  means TextBox *@
+    <span>Email:</span> @Html.EditorFor(model => model.Email)
+    <br />
+    <input type="submit" value="create" />
+}
+
